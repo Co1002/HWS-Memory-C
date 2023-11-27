@@ -1,4 +1,4 @@
-const vorrat = [{image: '1', turned: false},{image: '2', turned: false},{image: '3', turned: false},{image: '4', turned: false},{image: '5', turned: false},{image: '6', turned: false},{image: '7', turned: false},{image: '8', turned: false}];
+var vorrat = [{image: '1', turned: false},{image: '2', turned: false},{image: '3', turned: false},{image: '4', turned: false},{image: '5', turned: false},{image: '6', turned: false},{image: '7', turned: false},{image: '8', turned: false}];
 var turnsTotal = 0;
 
 function html2element(text){
