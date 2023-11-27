@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="pe-lg-0 ps-lg-5 container-fluid jusify-content-between">
             <a class="navbar-brand" href="#">
-                <strong>HWS-Memory</strong>
+                HWS-Memory
             </a>
             <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,18 +34,20 @@
         </div>
     </nav>
 
-    <div class="container features">
+    <div class="container features mt-5">
         <div class="row maincontent">
-            <div class="col-lg-8 col-md-8 col-sm-12 gameblock">
-                <h3 class="feature-title">Spielfeld</h3>
+            <div class="col-lg-8 col-md-12 col-sm-12 gameblock mb-4">
                 <div class="under" id="matrix">
 
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="col-lg-4 col-md-12 col-sm-12">
                 <h3 class="feature-title">Spielinformation</h3>
                 <div id="meminfo" class="alert alert-light" role="alert">
-                    Total Flips
+                    Total Flips: <span class="float-end">0</span>
+                </div>
+                <div id="meminfo" class="alert alert-light" role="alert">
+                    Total Time: <span class="float-end">00:00</span>
                 </div>
                 <textarea id="hitlist" rows="3" class="form-control disabled">Hitlist</textarea>
             </div>

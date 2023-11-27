@@ -1,4 +1,11 @@
-var vorrat = [{image: '1', turned: false},{image: '2', turned: false},{image: '3', turned: false},{image: '4', turned: false},{image: '5', turned: false},{image: '6', turned: false},{image: '7', turned: false},{image: '8', turned: false}];
+var vorrat = [{image: 'B-1.png', turned: false},
+{image: 'B-2.png', turned: false},
+{image: 'B-3.png', turned: false},
+{image: 'B-4.png', turned: false},
+{image: 'B-5.png', turned: false},
+{image: 'B-6.png', turned: false},
+{image: 'B-7.png', turned: false},
+{image: 'B-8.png', turned: false}];
 var turnsTotal = 0;
 
 function html2element(text){
@@ -8,18 +15,19 @@ function html2element(text){
 }
 
 function createGame(){
-    vorrat = [{image: '1', turned: false},{image: '2', turned: false},{image: '3', turned: false},{image: '4', turned: false},{image: '5', turned: false},{image: '6', turned: false},{image: '7', turned: false},{image: '8', turned: false}];
-    turnsTotal = 0;
-    let karten = [...vorrat, ...vorrat];
     let matrix = document.getElementById('matrix');
+    turnsTotal = 0;
+    matrix.innerHTML = "";
+    let karten = [...vorrat, ...vorrat];
     karten.forEach((value, index) => {
         // HTML der Karte
-        let cardHtml = '<div class="card"><div class="card-front">'+value.image+'</div><div class="card-back"></div></div>';
+        let cardHtml = '<div class="card ratio ratio-1x1"><div class="card-front" style="background-image: url(\'/images/'+value.image+'\')">'+index+'</div><div class="card-back"></div></div>';
         // Aus HTML ein Element erstellen
         let cardElement = html2element(cardHtml);
         // Karte in die Matrix schreiben
         matrix.appendChild(cardElement);
     });
+    console.log("New match created!");
 }
 
 createGame();
