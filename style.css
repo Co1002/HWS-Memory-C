@@ -1,7 +1,8 @@
 body {
     padding: 0;
     margin: 0;
-    background: #dae1eb url('images/background.jpg') no-repeat center center fixed;
+    background: #dae1eb;
+    background-image: url('images/background.jpg') ;
     background-size: cover;
 }
 
@@ -54,19 +55,15 @@ body {
     justify-content: center;
     border: 2px solid #0000006b;
     border-radius: 15%;
-}
+} 
 
-#matrix .under {
-    color: #000000;
-    width: 40vw;
-    padding: 10px;
-    background-color: #d0d6e7;
-    opacity: 0.88;
-}
+@media (orientation:landscape) {
+   .under{
+    color:#000000;
+    width:40vw;
+    padding:10px;
+    background-color: #d0d6e788;
 
-@media screen and (max-width: 768px) {
-    #matrix {
-        grid-template-columns: repeat(4, 8vw);
-        grid-template-rows: repeat(4, 8vw);
-    }
+
+   } 
 }
