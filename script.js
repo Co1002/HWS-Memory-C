@@ -8,7 +8,7 @@ function html2element(text){
 }
 
 function createGame(){
-    vorrat = [{image: '1', turned: false},{image: '2', turned: false},{image: '3', turned: false},{image: '4', turned: false}];
+    vorrat = [{image: '1', turned: false},{image: '2', turned: false},{image: '3', turned: false},{image: '4', turned: false},{image: '5', turned: false},{image: '6', turned: false},{image: '7', turned: false},{image: '8', turned: false}];
     turnsTotal = 0;
     let karten = [...vorrat, ...vorrat];
     let matrix = document.getElementById('matrix');
