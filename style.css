@@ -10,17 +10,17 @@ body {
     background: #5666b6;
 }
 
-.navbar .nav-link,
-.navbar .navbar-brand {
+.nav-link, 
+.navbar-brand {
     color: #fff;
     cursor: pointer;
 }
 
-.navbar .nav-link {
+.nav-link {
     margin-right: 1em !important;
 }
 
-.navbar .nav-link:hover {
+.nav-link:hover {
     color: #000;
 }
 
@@ -40,8 +40,7 @@ body {
     color: #000000;
     width: 80vw;
     padding: 10px;
-    background-color: #d0d6e7;
-    opacity: 0.88;
+    background-color: #d0d6e788;
 }
 
 #matrix {
@@ -57,13 +56,34 @@ body {
     border-radius: 15%;
 } 
 
-@media (orientation:landscape) {
-   .under{
-    color:#000000;
-    width:40vw;
-    padding:10px;
-    background-color: #d0d6e788;
+#infoblock {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: stretch;
+    border: 2px solid #000000;
+}
 
-
-   } 
+@media (orientation: landscape) {
+    .under{
+        color:#000000;
+        width:40vw;
+        padding:10px;
+        background-color: #d0d6e788;
+    }
+    
+    #matrix{
+        flex-grow: 2;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 8vw);
+        grid-template-rows: repeat(4, 8vw);
+        grid-gap: 5px;
+        justify-content: center;
+        border: 2px solid #0000006b;
+        border-radius: 15%;
+    }
 }
