@@ -21,7 +21,7 @@ function createGame(){
     let karten = [...vorrat, ...vorrat];
     karten.forEach((value, index) => {
         // HTML der Karte
-        let cardHtml = '<div class="card ratio ratio-1x1"><div class="card-front" style="background-image: url(\'/images/'+value.image+'\')">'+index+'</div><div class="card-back"></div></div>';
+        let cardHtml = '<div class="card-container"><div class="inner"><div class="card-front"></div><div class="card-back" style="background-image: url(\'/images/'+value.image+'\')"></div></div></div>';
         // Aus HTML ein Element erstellen
         let cardElement = html2element(cardHtml);
         // Karte in die Matrix schreiben
