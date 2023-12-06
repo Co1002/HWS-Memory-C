@@ -1,9 +1,10 @@
+/* CSS Gruppe C */
+
 body {
     padding: 0;
     margin: 0;
+    min-height: 100vh;
     background: #dae1eb;
-    background-image: url('images/background.jpg') ;
-    background-size: cover;
 }
 
 .navbar {
@@ -88,11 +89,20 @@ body {
     border-radius: 5px;
 }
 
+.card-front{
+    cursor: pointer;
+}
+
 .card-back{
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
     transform: rotateY(180deg);
+}
+
+.solved{
+    border: 2px solid green !important;
+    animation: solved 0.5s ease-in-out;
 }
 
 #infoblock {
@@ -125,5 +135,17 @@ body {
         border: 2px solid #0000006b;
         width: min-content;
         border-radius: 10px;
+    }
+}
+
+@keyframes solved {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.1;
+    }
+    1000%{
+        transform: 1;
     }
 }
