@@ -1,4 +1,4 @@
-// Variablen
+// 
 var vorrat = [{id: 1,image: 'B-1.png'},
 {id: 2, image: 'B-2.png'},
 {id: 3, image: 'B-3.png'},
@@ -7,6 +7,7 @@ var vorrat = [{id: 1,image: 'B-1.png'},
 {id: 6, image: 'B-6.png'},
 {id: 7, image: 'B-7.png'},
 {id: 8, image: 'B-8.png'}];
+var imageThemes = ["Emojis", "Tiere", "Fahrzeuge", "Flaggen", "Nahrungsmittel"];
 
 var karten = [];
 var lastElement = null;
@@ -41,6 +42,7 @@ function createGame(){
         i++;
     }
     let imageGroup = Math.floor(Math.random() * 5);
+    document.getElementById("imageTheme").innerText = imageThemes[imageGroup];
     karten = shuffle(karten);
     karten.forEach((value) => {
         // HTML der Karte

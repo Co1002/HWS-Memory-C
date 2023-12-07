@@ -19,6 +19,7 @@ let cron;
 
 let highscore  = localStorage.getItem("highscore");
 if(highscore == null){
+    localStorage.setItem("highscore", 0);
     highscore = 0;
 }else{
     highscore = parseInt(highscore);
@@ -48,6 +49,8 @@ function addSuccessTurn(){
     let timeInSeconds = parseInt(second) + parseInt(minute) * 60; 
     if(timeInSeconds > 90){
         score += 10;
+    }else if(timeInSeconds == 0){
+        score += 500;
     }else{
         score += Math.round(500 / (timeInSeconds / 2));
     }
